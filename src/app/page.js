@@ -1,33 +1,54 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+function Card() {
   return (
-    <div className="main">
-    <div className="container-1">
-    <div className="card">
-      <span id="Jhon">Jhon</span>
-      <span id="Doe"> Doe</span>
-      <div>
-        <p>Designer</p>
-        <img src="phone.svg"></img>
-        <span> 000-123-456-7890</span>
-        <img src="email"></img>
-        <span> email@yourdomain.com</span>
-        <img src="Group.svg"></img>
-        <span>Your address goes here
-        125 Street, USA</span>
+    <div>
+      <div className="cards">
+        <div className="name-flex">
+          <p className="Jhon">Oyunbat</p>
+          <p className="Doe"> Oyunbat</p>
+        </div>
+        <p className="job">Designer</p>
 
-      </div>
-      <div className="container-2">
-        <img src="blue.svg"></img>
-        <img src="yellow.svg"></img>
-        <img src="purple.svg"></img>
-        <img src="black.svg"></img>
+        <div className="address-flex">
+          <div>
+            <img src="phone.svg"></img>
+            <span> 90098070</span>
+          </div>
+          <div>
+            <img src="email.svg"></img>
+            <span> email@oyunbatdomain.com</span>
+          </div>
+          <div>
+            <img src="Group.svg"></img>
+            <span>Your address goes here <br />
+              125 Street, USA</span>
+          </div>
+        </div>
+        <img className="shape" src="Shape.png"></img>
+
+        <img className="logo" src="Logo.svg"></img>
+        <p className="co-name">Pinecone Academy </p>
+
+        <img className="qr" src="QR.svg"></img>
+
+
 
       </div>
     </div>
-    </div>
-  </div>
   );
 }
+export default function Home() {
+  const cards = [];
+  for (let i = 0; i < 18; i++) {
+    cards.push(<Card></Card>)
+  }
+  return (<div>{cards}</div>
+
+  );
+}
+
+
+
+
